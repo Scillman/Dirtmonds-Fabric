@@ -5,4 +5,6 @@ Requires the [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-ap
 
 [Discord Server](https://discord.gg/ew8kSgxj2U)
 
+[Releases](https://github.com/dmcpacks/Dirtmonds-Fabric/releases)
+
 Have **YOU** ever wanted to have dirtmonds in Minecraft? no? well anyways here's a mod that adds dirtmonds to minecraft, more Information in [the wiki](https://github.com/dmcpacks/Dirtmonds-Fabric/wiki)
