@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    " / ",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "item": "dirtmonds:dirtmond"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "dirtmonds:dirtmond_pickaxe",
+    "count": 1
+  }
+}
