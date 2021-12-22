@@ -1,0 +1,38 @@
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    }
+  ],
+  "result": {
+    "item": "dirtmonds:dirtmond_block",
+    "count": 1
+  },
+  "group": "dirtmond"
+}

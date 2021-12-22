@@ -1,0 +1,20 @@
+{
+  "block.dirtmonds.dirtmond_ore": "Dirtmond Ore",
+  "block.dirtmonds.dirtmond_block": "Dirtmond Block",
+
+  "itemGroup.dirtmonds.dirtmonds": "Dirtmonds",
+
+  "item.dirtmonds.dirtmond": "Dirtmond",
+  "item.dirtmonds.dirtmond_sword": "Dirtmond Sword",
+  "item.dirtmonds.dirtmond_axe": "Dirtmond Axe",
+  "item.dirtmonds.dirtmond_shovel": "Dirtmond Shovel",
+  "item.dirtmonds.dirtmond_pickaxe": "Dirtmond Pickaxe",
+  "item.dirtmonds.dirtmond_hoe": "Dirtmond Hoe",
+  "item.dirtmonds.dirtmond_helmet": "Dirtmond Helmet",
+  "item.dirtmonds.dirtmond_chestplate": "Dirtmond Chestplate",
+  "item.dirtmonds.dirtmond_leggings": "Dirtmond Leggings",
+  "item.dirtmonds.dirtmond_boots": "Dirtmond Boots",
+
+  "tooltip.dirtmonds.dirtmond_armor_shift": "§6§lFull Set Bonus§r: Jump Boost 1 while wearing set",
+  "tooltip.dirtmonds.dirtmond_armor": "Hold §5§oshift§r to reveal"
+}

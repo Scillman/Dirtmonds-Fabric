@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "dirtmonds:dirtmond_ore"
+  },
+  "result": "dirtmonds:dirtmond",
+  "experience": 0.1,
+  "cookingtime": 100
+}

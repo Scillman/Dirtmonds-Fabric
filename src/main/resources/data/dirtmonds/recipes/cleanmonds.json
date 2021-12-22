@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "dirtmonds:dirtmond"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "item": "minecraft:diamond",
+    "count": 1
+  },
+  "group": "dirtmond"
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "dirtmonds:item/dirtmond_shovel"
+  }
+}
