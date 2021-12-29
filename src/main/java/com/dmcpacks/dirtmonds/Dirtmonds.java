@@ -21,14 +21,16 @@ public class Dirtmonds implements ModInitializer {
 
 	public static final String MOD_ID = "dirtmonds";
 
+	//ore spawning
+
 	private static ConfiguredFeature<?, ?> OVERWORLD_DIRTMOND_ORE_CONFIGURED_FEATURE = Feature.ORE
 			.configure(new OreFeatureConfig(
 					OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
 					ModBlocks.DIRTMOND_ORE.getDefaultState(),
-					5)); // vein size
+					8)); // vein size
 
 	public static PlacedFeature OVERWORLD_WOOL_ORE_PLACED_FEATURE = OVERWORLD_DIRTMOND_ORE_CONFIGURED_FEATURE.withPlacement(
-			CountPlacementModifier.of(7), // number of veins per chunk
+			CountPlacementModifier.of(10), // number of veins per chunk
 			SquarePlacementModifier.of(), // spreading horizontally
 			HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(64))); // height
 
