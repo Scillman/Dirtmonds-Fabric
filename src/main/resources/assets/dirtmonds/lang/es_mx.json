@@ -1,0 +1,22 @@
+{
+  "block.dirtmonds.dirtmond_ore": "Mineral de Tierramante",
+  "block.dirtmonds.dirtmond_block": "Bloque de Tierramante",
+
+  "itemGroup.dirtmonds.dirtmonds": "Tierramante",
+
+  "item.dirtmonds.dirtmond": "Tierramante",
+  "item.dirtmonds.dirtmond_sword": "Espada de Tierramante",
+  "item.dirtmonds.dirtmond_axe": "Hacha de Tierramante",
+  "item.dirtmonds.dirtmond_shovel": "Pala de Tierramante",
+  "item.dirtmonds.dirtmond_pickaxe": "Pico de Tierramante",
+  "item.dirtmonds.dirtmond_hoe": "Azada de Tierramante",
+  "item.dirtmonds.dirtmond_helmet": "Casco de Tierramante",
+  "item.dirtmonds.dirtmond_chestplate": "Peto de Tierramante",
+  "item.dirtmonds.dirtmond_leggings": "Pantalones de Tierramante",
+  "item.dirtmonds.dirtmond_boots": "Botas de Tierramante",
+  "item.dirtmonds.dirtmond_finder.novaluables": "No se encontraron tierramantes",
+  "item.dirtmonds.dirtmond_finder": "Encontrador de Tierramante",
+
+  "tooltip.dirtmonds.dirtmond_armor_shift": "§6§lBonus de Juego Completo§r: Salto 1 mientras tienes el juego completo puesto",
+  "tooltip.dirtmonds.dirtmond_armor": "Sostenga §5§oshift§r para enseñar"
+}

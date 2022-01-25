@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "dirtmonds",
-  "version": "1.0",
+  "version": "1.2.1",
 
   "name": "Dirtmonds",
   "description": "Adds Dirtmonds to Minecraft! (why)",
@@ -9,7 +9,8 @@
     "Dmcpacks"
   ],
   "contact": {
-    "sources": ""
+    "sources": "https://github.com/dmcpacks/Dirtmonds-Fabric",
+    "discord": "https://discord.com/invite/ew8kSgxj2U"
   },
 
   "license": "GNU",

@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 public enum  ModToolMaterial implements ToolMaterial {
 
-    DIRTMOND(3, 1051, 7.0F, 2.0F, 17, () -> {
+    DIRTMOND(3, 1051, 7.0F, 1.0F, 17, () -> {
         return Ingredient.ofItems(ModItems.DIRTMOND);
     });
 

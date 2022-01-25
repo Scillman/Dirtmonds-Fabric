@@ -1,9 +1,6 @@
 package com.dmcpacks.dirtmonds.item;
 
-import com.dmcpacks.dirtmonds.item.custom.ModArmorItem;
-import com.dmcpacks.dirtmonds.item.custom.ModAxeItem;
-import com.dmcpacks.dirtmonds.item.custom.ModHoeItem;
-import com.dmcpacks.dirtmonds.item.custom.ModPickaxeItem;
+import com.dmcpacks.dirtmonds.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
@@ -19,23 +16,26 @@ public class ModItems {
     public static final Item DIRTMOND = registerItem("dirtmond", new Item(new FabricItemSettings()
             .group(ModItemGroup.DIRTMONDS)));
 
-    public static final Item DIRTMOND_SWORD = registerItem("dirtmond_sword", new SwordItem(ModToolMaterial.DIRTMOND, 3, 2f,
+    public static final Item DIRTMOND_FINDER = registerItem("dirtmond_finder", new DirtmondFinder(new FabricItemSettings()
+            .group(ModItemGroup.DIRTMONDS)));
+
+    public static final Item DIRTMOND_SWORD = registerItem("dirtmond_sword", new SwordItem(ModToolMaterial.DIRTMOND, 3, -2.4f,
+            new FabricItemSettings()
+            .group(ModItemGroup.DIRTMONDS).maxDamage(1)));
+
+    public static final Item DIRTMOND_SHOVEL = registerItem("dirtmond_shovel", new ShovelItem(ModToolMaterial.DIRTMOND, 0, -2.9f,
             new FabricItemSettings()
             .group(ModItemGroup.DIRTMONDS)));
 
-    public static final Item DIRTMOND_SHOVEL = registerItem("dirtmond_shovel", new ShovelItem(ModToolMaterial.DIRTMOND, 0, 3f,
+    public static final Item DIRTMOND_AXE = registerItem("dirtmond_axe", new ModAxeItem(ModToolMaterial.DIRTMOND, 5f, -2.9f,
             new FabricItemSettings()
             .group(ModItemGroup.DIRTMONDS)));
 
-    public static final Item DIRTMOND_AXE = registerItem("dirtmond_axe", new ModAxeItem(ModToolMaterial.DIRTMOND, 5f, 3.5f,
+    public static final Item DIRTMOND_PICKAXE = registerItem("dirtmond_pickaxe", new ModPickaxeItem(ModToolMaterial.DIRTMOND, 1, -2.8f,
             new FabricItemSettings()
             .group(ModItemGroup.DIRTMONDS)));
 
-    public static final Item DIRTMOND_PICKAXE = registerItem("dirtmond_pickaxe", new ModPickaxeItem(ModToolMaterial.DIRTMOND, 1, 3f,
-            new FabricItemSettings()
-            .group(ModItemGroup.DIRTMONDS)));
-
-    public static final Item DIRTMOND_HOE = registerItem("dirtmond_hoe", new ModHoeItem(ModToolMaterial.DIRTMOND, 0, 2.3f,
+    public static final Item DIRTMOND_HOE = registerItem("dirtmond_hoe", new ModHoeItem(ModToolMaterial.DIRTMOND, 0, -1f,
             new FabricItemSettings()
             .group(ModItemGroup.DIRTMONDS)));
 
