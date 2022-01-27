@@ -70,14 +70,9 @@ public class ModArmorItem extends ArmorItem {
     }
 
     private void addStatusEffectForMaterial(PlayerEntity player, ArmorMaterial mapArmorMaterial, StatusEffect mapStatusEffect) {
-        boolean hasPlayerEffect = player.hasStatusEffect(mapStatusEffect);
 
-        if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 200));
-
-            if(new Random().nextFloat() > 0.05f) { // 5% of damaging the armor! Possibly!
-                player.getInventory().damageArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
-            }
+        if(hasCorrectArmorOn(mapArmorMaterial, player)) {
+            player.addStatusEffect(new StatusEffectInstance(mapStatusEffect, 10));
         }
     }
 

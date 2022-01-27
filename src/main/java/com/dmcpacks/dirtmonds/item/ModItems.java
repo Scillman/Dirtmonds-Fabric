@@ -3,7 +3,6 @@ package com.dmcpacks.dirtmonds.item;
 import com.dmcpacks.dirtmonds.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
@@ -14,9 +13,6 @@ import com.dmcpacks.dirtmonds.Dirtmonds;
 public class ModItems {
 
     public static final Item DIRTMOND = registerItem("dirtmond", new Item(new FabricItemSettings()
-            .group(ModItemGroup.DIRTMONDS)));
-
-    public static final Item DIRTMOND_FINDER = registerItem("dirtmond_finder", new DirtmondFinder(new FabricItemSettings()
             .group(ModItemGroup.DIRTMONDS)));
 
     public static final Item DIRTMOND_SWORD = registerItem("dirtmond_sword", new SwordItem(ModToolMaterial.DIRTMOND, 3, -2.4f,

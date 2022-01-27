@@ -10,11 +10,11 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
-    DIRTMOND("dirtmond", 26, new int[]{2, 5, 6, 2}, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.5F, 0.0F, () -> {
+    DIRTMOND("dirtmond", 26, new int[]{2, 4, 5, 2}, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1F, 0.0F, () -> {
         return Ingredient.ofItems(ModItems.DIRTMOND);
     });
 
-    private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
+    private static final int[] BASE_DURABILITY = new int[]{11, 13, 14, 9};
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;
