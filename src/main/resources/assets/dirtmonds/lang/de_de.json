@@ -1,0 +1,22 @@
+{
+  "block.dirtmonds.dirtmond_ore": "Erdmanterz",
+  "block.dirtmonds.dirtmond_block": "Erdmantblock",
+
+  "itemGroup.dirtmonds.dirtmonds": "Erdmanten",
+
+  "item.dirtmonds.dirtmond": "Erdmant",
+  "item.dirtmonds.dirtmond_sword": "Erdmantschwert",
+  "item.dirtmonds.dirtmond_axe": "Erdmantaxt",
+  "item.dirtmonds.dirtmond_shovel": "Erdmantschaufel",
+  "item.dirtmonds.dirtmond_pickaxe": "Erdmantspitzhacke",
+  "item.dirtmonds.dirtmond_hoe": "Erdmanthacke",
+  "item.dirtmonds.dirtmond_helmet": "Erdmanthelm",
+  "item.dirtmonds.dirtmond_chestplate": "Erdmantharnisch",
+  "item.dirtmonds.dirtmond_leggings": "Erdmantbeinschutz",
+  "item.dirtmonds.dirtmond_boots": "Erdmantstiefel",
+  "item.dirtmonds.dirtmond_finder.novaluables": "Keine Erdmanten gefunden",
+  "item.dirtmonds.dirtmond_finder": "Erdmantsucher",
+
+  "tooltip.dirtmonds.dirtmond_armor_shift": "§6§lWenn ganzes Set ausgerüstet§r: Sprungkraft 1",
+  "tooltip.dirtmonds.dirtmond_armor": "§5§oUmschalttaste§r zum aufdecken halten"
+}
