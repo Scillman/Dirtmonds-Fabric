@@ -14,8 +14,6 @@
   "item.dirtmonds.dirtmond_chestplate": "Erdmantharnisch",
   "item.dirtmonds.dirtmond_leggings": "Erdmantbeinschutz",
   "item.dirtmonds.dirtmond_boots": "Erdmantstiefel",
-  "item.dirtmonds.dirtmond_finder.novaluables": "Keine Erdmanten gefunden",
-  "item.dirtmonds.dirtmond_finder": "Erdmantsucher",
 
   "tooltip.dirtmonds.dirtmond_armor_shift": "§6§lWenn ganzes Set ausgerüstet§r: Sprungkraft 1",
   "tooltip.dirtmonds.dirtmond_armor": "§5§oUmschalttaste§r zum aufdecken halten"

@@ -1,11 +1,16 @@
 package com.dmcpacks.dirtmonds;
 
 import com.dmcpacks.dirtmonds.block.ModBlocks;
+import com.dmcpacks.dirtmonds.config.ModConfigs;
+import com.dmcpacks.dirtmonds.item.ModItemGroup;
 import com.dmcpacks.dirtmonds.item.ModItems;
+import com.dmcpacks.dirtmonds.item.custom.DirtmondFinder;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -16,10 +21,15 @@ import net.minecraft.world.gen.decorator.CountPlacementModifier;
 import net.minecraft.world.gen.decorator.HeightRangePlacementModifier;
 import net.minecraft.world.gen.decorator.SquarePlacementModifier;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.util.registry.Registry;
 
 public class Dirtmonds implements ModInitializer {
 
 	public static final String MOD_ID = "dirtmonds";
+
+	//dirtmond finder
+	public static final Item DIRTMOND_FINDER = new DirtmondFinder(new FabricItemSettings()
+			.group(ModItemGroup.DIRTMONDS).maxCount(16));
 
 	//ore spawning
 
@@ -36,9 +46,16 @@ public class Dirtmonds implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModConfigs.registerConfigs();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+		//registering dirtmond_finder
+		if(ModConfigs.dirtmondfinder) {
+			Registry.register(Registry.ITEM, new Identifier("dirtmonds", "dirtmond_finder"), DIRTMOND_FINDER);
+		}
+
+		//registering dirtmonds
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
 				new Identifier("dirtmonds", "overworld_dirtmond_ore"), OVERWORLD_DIRTMOND_ORE_CONFIGURED_FEATURE);
 		Registry.register(BuiltinRegistries.PLACED_FEATURE, new Identifier("dirtmonds", "overworld_dirtmond_ore"),
