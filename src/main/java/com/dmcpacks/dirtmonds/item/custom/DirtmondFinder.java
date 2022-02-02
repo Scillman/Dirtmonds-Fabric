@@ -2,9 +2,13 @@ package com.dmcpacks.dirtmonds.item.custom;
 
 import com.dmcpacks.dirtmonds.block.ModBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.client.particle.ParticleManager;
+import net.minecraft.client.render.WorldRenderer;
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;

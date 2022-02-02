@@ -1,19 +1,18 @@
 {
   "schemaVersion": 1,
   "id": "dirtmonds",
-  "version": "1.2.3",
+  "version": "${version}",
 
-  "name": "Dirtmonds",
-  "description": "Adds Dirtmonds to Minecraft! (why)",
+  "name": "Dirtmonds!",
+  "description": "Adds dirtmonds to the game (why)",
   "authors": [
-    "Dmcpacks"
+    "Me!"
   ],
   "contact": {
-    "sources": "https://github.com/dmcpacks/Dirtmonds-Fabric",
-    "discord": "https://discord.com/invite/ew8kSgxj2U"
+    "sources": "github.com/dmcpacks/Dirtmonds-Fabric"
   },
 
-  "license": "GNU",
+  "license": "GNU-3.0",
   "icon": "assets/dirtmonds/icon.png",
 
   "environment": "*",
@@ -23,11 +22,10 @@
     ]
   },
   "mixins": [
-    "dirtmonds.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.11.3",
+    "fabricloader": ">=0.12.12",
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"

@@ -1,5 +1,6 @@
 package com.dmcpacks.dirtmonds.item.custom;
 
+import com.dmcpacks.dirtmonds.config.ModConfigs;
 import com.dmcpacks.dirtmonds.item.ModArmorMaterial;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.gui.screen.Screen;
@@ -37,10 +38,12 @@ public class ModArmorItem extends ArmorItem {
     @Override
 
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if(Screen.hasShiftDown()) {
-            tooltip.add(new TranslatableText("tooltip.dirtmonds.dirtmond_armor_shift"));
-        } else {
-            tooltip.add(new TranslatableText("tooltip.dirtmonds.dirtmond_armor"));
+        if(ModConfigs.fullsetbonus) {
+            if (Screen.hasShiftDown()) {
+                tooltip.add(new TranslatableText("tooltip.dirtmonds.dirtmond_armor_shift"));
+            } else {
+                tooltip.add(new TranslatableText("tooltip.dirtmonds.dirtmond_armor"));
+            }
         }
     }
 
@@ -50,7 +53,9 @@ public class ModArmorItem extends ArmorItem {
                 PlayerEntity player = (PlayerEntity)entity;
 
                 if(hasFullSuitOfArmorOn(player)) {
-                    evaluateArmorEffects(player);
+                    if(ModConfigs.fullsetbonus) {
+                        evaluateArmorEffects(player);
+                    }
                 }
             }
         }

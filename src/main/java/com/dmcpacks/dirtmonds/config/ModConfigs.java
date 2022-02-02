@@ -8,6 +8,7 @@ public class ModConfigs {
     private static ModConfigProvider configs;
 
     public static boolean dirtmondfinder;
+    public static boolean fullsetbonus;
 
     public static void registerConfigs() {
         configs = new ModConfigProvider();
@@ -20,9 +21,11 @@ public class ModConfigs {
 
     private static void createConfigs() {
         configs.addKeyValuePair(new Pair<>("dirtmondfinder", true), "false to disable, true to enable");
+        configs.addKeyValuePair(new Pair<>("fullsetbonus", true), "false to disable, true to enable");
     }
 
     private static void assignConfigs() {
         dirtmondfinder = CONFIG.getOrDefault("dirtmondfinder", true);
+        fullsetbonus = CONFIG.getOrDefault("fullsetbonus", true);
     }
 }
