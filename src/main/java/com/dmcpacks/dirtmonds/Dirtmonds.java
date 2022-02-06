@@ -5,6 +5,7 @@ import com.dmcpacks.dirtmonds.config.ModConfigs;
 import com.dmcpacks.dirtmonds.item.ModItemGroup;
 import com.dmcpacks.dirtmonds.item.ModItems;
 import com.dmcpacks.dirtmonds.item.custom.DirtmondFinder;
+import com.dmcpacks.dirtmonds.util.ModLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -49,6 +50,7 @@ public class Dirtmonds implements ModInitializer {
 		ModConfigs.registerConfigs();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModLootTableModifiers.modifyLootTables();
 
 		//registering dirtmond_finder
 		if(ModConfigs.dirtmondfinder) {
