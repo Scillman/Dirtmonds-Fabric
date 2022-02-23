@@ -1,6 +1,8 @@
 # Dirtmonds-Fabric
 Adds dirtmonds to Minecraft using fabric
 
+![GitHub all releases](https://img.shields.io/github/downloads/dmcpacks/Dirtmonds-Fabric/total?color=green&style=plastic)
+
 Requires the [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)
 
 [Discord Server](https://discord.gg/ew8kSgxj2U)
