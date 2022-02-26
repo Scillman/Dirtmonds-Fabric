@@ -18,7 +18,7 @@ public class ModItems {
 
     public static final Item DIRTMOND_SWORD = registerItem("dirtmond_sword", new SwordItem(ModToolMaterial.DIRTMOND, 3, -2.4f,
             new FabricItemSettings()
-            .group(ModItemGroup.DIRTMONDS).maxDamage(1)));
+            .group(ModItemGroup.DIRTMONDS)));
 
     public static final Item DIRTMOND_SHOVEL = registerItem("dirtmond_shovel", new ShovelItem(ModToolMaterial.DIRTMOND, 0, -2.9f,
             new FabricItemSettings()

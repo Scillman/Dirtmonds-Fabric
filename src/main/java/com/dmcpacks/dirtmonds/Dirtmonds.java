@@ -30,7 +30,7 @@ public class Dirtmonds implements ModInitializer {
 
 	//dirtmond finder
 	public static final Item DIRTMOND_FINDER = new DirtmondFinder(new FabricItemSettings()
-			.group(ModItemGroup.DIRTMONDS).maxCount(16));
+			.group(ModItemGroup.DIRTMONDS).maxCount(1));
 
 	//ore spawning
 
