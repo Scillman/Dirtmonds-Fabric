@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.feature.OreFeature;
 
 
 public class ModBlocks {
