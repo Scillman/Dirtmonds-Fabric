@@ -1,6 +1,7 @@
 package com.dmcpacks.dirtmonds.item.custom;
 
 import com.dmcpacks.dirtmonds.block.ModBlocks;
+import com.dmcpacks.dirtmonds.config.ModConfigs;
 import net.minecraft.block.Block;
 import net.minecraft.client.particle.ParticleManager;
 import net.minecraft.entity.player.PlayerEntity;
@@ -25,23 +26,28 @@ public class DirtmondFinder extends Item {
     public ActionResult useOnBlock(ItemUsageContext context) {
 
         if (context.getWorld().isClient()) {
-            BlockPos click = context.getBlockPos();
-            PlayerEntity player = context.getPlayer();
-            boolean foundBlock = false;
+            if(ModConfigs.dirtmondfinder) {
+                BlockPos click = context.getBlockPos();
+                PlayerEntity player = context.getPlayer();
+                boolean foundBlock = false;
 
-            for (int i = 0; i <= click.getY() + 64; i++) {
-                Block below = context.getWorld().getBlockState(click.down(i)).getBlock();
+                for (int i = 0; i <= click.getY() + 64; i++) {
+                    Block below = context.getWorld().getBlockState(click.down(i)).getBlock();
 
-                if (isDirtmond(below)) {
-                    DirtmondCoords(click.down(i), player, below);
-                    foundBlock = true;
-                    break;
+                    if (isDirtmond(below)) {
+                        DirtmondCoords(click.down(i), player, below);
+                        foundBlock = true;
+                        break;
+                    }
                 }
-            }
 
-        if(!foundBlock) {
-            player.sendMessage(new TranslatableText("item.dirtmonds.dirtmond_finder.novaluables"), false);
-        }
+                if (!foundBlock) {
+                    player.sendMessage(new TranslatableText("item.dirtmonds.dirtmond_finder.novaluables"), false);
+                }
+            } else {
+                PlayerEntity player = context.getPlayer();
+                player.sendMessage(new LiteralText("Hmm, this item doesn't seem to work"), false);
+            }
     }
         context.getStack().damage( 1, context.getPlayer(),
                 (player) -> player.sendToolBreakStatus(player.getActiveHand()));

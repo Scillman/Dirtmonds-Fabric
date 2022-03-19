@@ -16,7 +16,7 @@ public class ModItems {
     public static final Item DIRTMOND = registerItem("dirtmond", new Item(new FabricItemSettings()
             .group(ModItemGroup.DIRTMONDS)));
 
-    public static final Item DIRTMOND_SWORD = registerItem("dirtmond_sword", new SwordItem(ModToolMaterial.DIRTMOND, 3, -2.4f,
+    public static final Item DIRTMOND_SWORD = registerItem("dirtmond_sword", new ModSwordItem(ModToolMaterial.DIRTMOND, 3, -2.4f,
             new FabricItemSettings()
             .group(ModItemGroup.DIRTMONDS)));
 
