@@ -42,11 +42,11 @@ public class DirtmondFinder extends Item {
                 }
 
                 if (!foundBlock) {
-                    player.sendMessage(new TranslatableText("item.dirtmonds.dirtmond_finder.novaluables"), false);
+                    player.sendMessage(new TranslatableText("item.dirtmonds.dirtmond_finder.novaluables"), true);
                 }
             } else {
                 PlayerEntity player = context.getPlayer();
-                player.sendMessage(new LiteralText("Hmm, this item doesn't seem to work"), false);
+                player.sendMessage(new LiteralText("Hmm, this item doesn't seem to work"), true);
             }
     }
         context.getStack().damage( 1, context.getPlayer(),
@@ -57,7 +57,7 @@ public class DirtmondFinder extends Item {
 
     private void DirtmondCoords(BlockPos blockPos, PlayerEntity player, Block dirtmond) {
         player.sendMessage(new LiteralText("Detected " + dirtmond.asItem().getName().getString()
-                + " at " + "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"), false);
+                + " at " + "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"), true);
     }
 
     private boolean isDirtmond(Block block) {
