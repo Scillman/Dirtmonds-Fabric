@@ -16,7 +16,6 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -40,9 +39,9 @@ public class ModArmorItem extends ArmorItem {
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if(ModConfigs.fullsetbonus) {
             if (Screen.hasShiftDown()) {
-                tooltip.add(new TranslatableText("tooltip.dirtmonds.dirtmond_armor_shift"));
+                tooltip.add(Text.translatable("tooltip.dirtmonds.dirtmond_armor_shift"));
             } else {
-                tooltip.add(new TranslatableText("tooltip.dirtmonds.dirtmond_armor"));
+                tooltip.add(Text.translatable("tooltip.dirtmonds.dirtmond_armor"));
             }
         }
     }

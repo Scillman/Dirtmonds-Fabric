@@ -9,8 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.world.World;
-import net.minecraft.text.LiteralText;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 
@@ -42,11 +41,11 @@ public class DirtmondFinder extends Item {
                 }
 
                 if (!foundBlock) {
-                    player.sendMessage(new TranslatableText("item.dirtmonds.dirtmond_finder.novaluables"), true);
+                    player.sendMessage(Text.translatable("item.dirtmonds.dirtmond_finder.novaluables"), true);
                 }
             } else {
                 PlayerEntity player = context.getPlayer();
-                player.sendMessage(new LiteralText("Hmm, this item doesn't seem to work"), true);
+                player.sendMessage(Text.literal("Hmm, this item doesn't seem to work"), true);
             }
     }
         context.getStack().damage( 1, context.getPlayer(),
@@ -56,7 +55,7 @@ public class DirtmondFinder extends Item {
     }
 
     private void DirtmondCoords(BlockPos blockPos, PlayerEntity player, Block dirtmond) {
-        player.sendMessage(new LiteralText("Detected " + dirtmond.asItem().getName().getString()
+        player.sendMessage(Text.literal("Detected " + dirtmond.asItem().getName().getString()
                 + " at " + "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"), true);
     }
 

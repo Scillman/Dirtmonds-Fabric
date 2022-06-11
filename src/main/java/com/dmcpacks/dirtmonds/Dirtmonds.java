@@ -28,8 +28,8 @@ public class Dirtmonds implements ModInitializer {
 		ModConfigs.registerConfigs();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-		ModLootTableModifiers.modifyLootTables();
 		OrePlacedFeature.init();
+		ModLootTableModifiers.modifyLootTables();
 
 			Registry.register(Registry.ITEM, new Identifier("dirtmonds", "dirtmond_finder"), DIRTMOND_FINDER);
 

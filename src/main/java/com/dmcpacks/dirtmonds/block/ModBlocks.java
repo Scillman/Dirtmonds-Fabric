@@ -11,7 +11,6 @@ import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.OreFeature;
 
 
 public class ModBlocks {
@@ -27,6 +26,7 @@ public class ModBlocks {
             .requiresTool()
             .strength(4f, 20f)
             .sounds(BlockSoundGroup.METAL)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

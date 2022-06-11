@@ -1,6 +1,7 @@
 {
-  "block.dirtmonds.dirtmond_ore": "Mineral de Tierramante",
-  "block.dirtmonds.dirtmond_block": "Bloque de Tierramante",
+  "block.dirtmonds.dirtmond_ore": "Mineral de Tierramantes",
+  "block.dirtmonds.dirtmond_block": "Bloque de Tierramantes",
+  "block.dirtmonds.dirtmond_refiner": "Refinador de Tierramantes",
 
   "itemGroup.dirtmonds.dirtmonds": "Tierramante",
 
