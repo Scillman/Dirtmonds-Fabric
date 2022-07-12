@@ -8,10 +8,14 @@ import java.util.List;
 
 public class OreConfiguredFeature {
 
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ORE_DIRTMONDS;
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ORE_DIRTMONDS_LARGE;
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ORE_DIRTMONDS_MEDIUM;
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ORE_DIRTMONDS_SMALL;
 
     static {
-        ORE_DIRTMONDS = ConfiguredFeatures.register("ore_dirtmonds", Feature.ORE, new OreFeatureConfig(List.of(OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.DIRTMOND_ORE.getDefaultState())), 7));
+        ORE_DIRTMONDS_LARGE = ConfiguredFeatures.register("ore_dirtmonds_large", Feature.ORE, new OreFeatureConfig(List.of(OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.DIRTMOND_ORE.getDefaultState())), 7, 1.0F));
+        ORE_DIRTMONDS_MEDIUM = ConfiguredFeatures.register("ore_dirtmonds_medium", Feature.ORE, new OreFeatureConfig(List.of(OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.DIRTMOND_ORE.getDefaultState())), 5, .05F));
+        ORE_DIRTMONDS_SMALL = ConfiguredFeatures.register("ore_dirtmonds_small", Feature.ORE, new OreFeatureConfig(List.of(OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ModBlocks.DIRTMOND_ORE.getDefaultState())), 3));
     }
 
 }

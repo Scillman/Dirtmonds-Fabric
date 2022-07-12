@@ -34,6 +34,6 @@ public class Dirtmonds implements ModInitializer {
 			Registry.register(Registry.ITEM, new Identifier("dirtmonds", "dirtmond_finder"), DIRTMOND_FINDER);
 
 
-		System.out.print("Fully registered" + MOD_ID);
+		System.out.print("Fully registered" + MOD_ID + "\n");
 	}
 }
