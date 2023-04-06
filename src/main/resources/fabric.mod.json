@@ -19,6 +19,9 @@
   "entrypoints": {
     "main": [
       "com.dmcpacks.dirtmonds.Dirtmonds"
+    ],
+    "fabric-datagen": [
+      "com.dmcpacks.dirtmonds.datagen.DataGeneration"
     ]
   },
   "mixins": [
@@ -26,9 +29,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.14.19",
     "fabric": "*",
-    "minecraft": ">=1.19",
+    "minecraft": "=1.19.3",
     "java": ">=17"
   },
   "suggests": {

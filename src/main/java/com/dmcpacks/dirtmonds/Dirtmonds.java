@@ -37,8 +37,8 @@ public class Dirtmonds implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModConfigs.registerConfigs();
-		ModItems.registerModItems();
 		ModItemGroup.registerItemGroup();
+		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		OreGeneration.generateOres();
 		ModLootTableModifiers.modifyLootTables();
