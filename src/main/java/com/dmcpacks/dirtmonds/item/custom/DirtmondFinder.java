@@ -3,17 +3,12 @@ package com.dmcpacks.dirtmonds.item.custom;
 import com.dmcpacks.dirtmonds.block.ModBlocks;
 import com.dmcpacks.dirtmonds.config.ModConfigs;
 import net.minecraft.block.Block;
-import net.minecraft.client.particle.ParticleManager;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.particle.ParticleTypes;
-import net.minecraft.world.World;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
-
-import javax.annotation.Nullable;
 
 public class DirtmondFinder extends Item {
 
