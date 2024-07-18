@@ -30,7 +30,7 @@ public class ModArmorItem extends ArmorItem {
             (new ImmutableMap.Builder<ArmorMaterial, StatusEffect>())
                     .put(ModArmorMaterial.DIRTMOND, StatusEffects.JUMP_BOOST).build();
 
-    public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
+    public ModArmorItem(ArmorMaterial material, Type slot, Settings settings) {
         super(material, slot, settings);
     }
 
