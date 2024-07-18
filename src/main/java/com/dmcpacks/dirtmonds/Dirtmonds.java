@@ -6,13 +6,10 @@ import com.dmcpacks.dirtmonds.item.ModItemGroup;
 import com.dmcpacks.dirtmonds.item.ModItems;
 import com.dmcpacks.dirtmonds.item.custom.DirtmondFinder;
 import com.dmcpacks.dirtmonds.util.ModLootTableModifiers;
-import com.dmcpacks.dirtmonds.world.OrePlacedFeature;
-import com.dmcpacks.dirtmonds.world.gen.OreGeneration;
+import com.dmcpacks.dirtmonds.world.OreJsonRegistration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -24,15 +21,8 @@ public class Dirtmonds implements ModInitializer {
 
 	//dirtmond finder
 
-	public static final Item DIRTMOND_FINDER = new DirtmondFinder(new FabricItemSettings().maxCount(1));
-
-	public static void addToItemGroup(ItemGroup group, Item item) {
-		ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
-	}
-
-	public static void addItemsToItemGroups() {
-		addToItemGroup(ModItemGroup.DIRTMONDS, DIRTMOND_FINDER);
-	}
+	public static final Item DIRTMOND_FINDER = new DirtmondFinder(new FabricItemSettings()
+			.maxCount(1));
 
 	@Override
 	public void onInitialize() {
@@ -40,13 +30,14 @@ public class Dirtmonds implements ModInitializer {
 		ModItemGroup.registerItemGroup();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-		OreGeneration.generateOres();
 		ModLootTableModifiers.modifyLootTables();
+		OreJsonRegistration.registerOreGeneration();
 
+		if(ModConfigs.dirtmondfinder) {
 			Registry.register(Registries.ITEM, new Identifier("dirtmonds", "dirtmond_finder"), DIRTMOND_FINDER);
-			addItemsToItemGroups();
+		}
 
 
-		System.out.print("\nFully registered " + MOD_ID + "\n");
+		System.out.print("Fully registered " + MOD_ID + "\n");
 	}
 }

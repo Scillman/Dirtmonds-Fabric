@@ -12,7 +12,7 @@ public class ModItemGroup {
 
     public static void registerItemGroup() {
         DIRTMONDS = FabricItemGroup.builder(new Identifier(Dirtmonds.MOD_ID, "dirtmonds"))
-                .displayName(Text.literal("Dirtmonds"))
+                .displayName(Text.translatable("itemGroup.dirtmonds.dirtmonds"))
                 .icon(() -> new ItemStack(ModItems.DIRTMOND)).build();
     }
 }

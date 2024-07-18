@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.0-SNAPSHOT'
+	id 'fabric-loom' version '0.11-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -33,22 +33,6 @@ processResources {
 
 	filesMatching("fabric.mod.json") {
 		expand "version": project.version
-	}
-}
-
-def dataOutput = 'src/main/generated'
-
-loom {
-	runs {
-		datagen {
-			server()
-
-			name "Data Generation"
-			vmArg "-Dfabric-api.datagen"
-			vmArg "-Dfabric-api.datagen.output-dir=${file(dataOutput)}"
-
-			runDir "build/datagen"
-		}
 	}
 }
 
