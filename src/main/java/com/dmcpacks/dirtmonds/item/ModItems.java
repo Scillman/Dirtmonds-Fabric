@@ -57,24 +57,24 @@ public class ModItems {
     }
 
     public static void addItemsToItemGroups() {
-        addToItemGroup(ModItemGroup.DIRTMONDS, DIRTMOND);
-        addToItemGroup(ModItemGroup.DIRTMONDS, DIRTMOND_SWORD);
-        addToItemGroup(ModItemGroup.DIRTMONDS, DIRTMOND_SHOVEL);
-        addToItemGroup(ModItemGroup.DIRTMONDS, DIRTMOND_AXE);
-        addToItemGroup(ModItemGroup.DIRTMONDS, DIRTMOND_PICKAXE);
-        addToItemGroup(ModItemGroup.DIRTMONDS, DIRTMOND_HOE);
-        addToItemGroup(ModItemGroup.DIRTMONDS, DIRTMOND_HELMET);
-        addToItemGroup(ModItemGroup.DIRTMONDS, DIRTMOND_CHESTPLATE);
-        addToItemGroup(ModItemGroup.DIRTMONDS, DIRTMOND_LEGGINGS);
-        addToItemGroup(ModItemGroup.DIRTMONDS, DIRTMOND_BOOTS);
+        addToItemGroup(DIRTMOND);
+        addToItemGroup(DIRTMOND_SWORD);
+        addToItemGroup(DIRTMOND_SHOVEL);
+        addToItemGroup(DIRTMOND_AXE);
+        addToItemGroup(DIRTMOND_PICKAXE);
+        addToItemGroup(DIRTMOND_HOE);
+        addToItemGroup(DIRTMOND_HELMET);
+        addToItemGroup(DIRTMOND_CHESTPLATE);
+        addToItemGroup(DIRTMOND_LEGGINGS);
+        addToItemGroup(DIRTMOND_BOOTS);
 
         if(ModConfigs.dirtmondfinder) {
-            addToItemGroup(ModItemGroup.DIRTMONDS, Dirtmonds.DIRTMOND_FINDER);
+            addToItemGroup(Dirtmonds.DIRTMOND_FINDER);
         }
     }
 
-    public static void addToItemGroup(ItemGroup group, Item item) {
-        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
+    public static void addToItemGroup(Item item) {
+        ItemGroupEvents.modifyEntriesEvent(ModItemGroup.DIRTMONDS).register(entries -> entries.add(item));
     }
     public static void registerModItems() {
         addItemsToItemGroups();

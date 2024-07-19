@@ -3,10 +3,9 @@ package com.dmcpacks.dirtmonds.block;
 import com.dmcpacks.dirtmonds.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import com.dmcpacks.dirtmonds.Dirtmonds;
-import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -17,14 +16,12 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
-    public static final Block DIRTMOND_ORE = registerBlock("dirtmond_ore", new Block(FabricBlockSettings
-            .of(Material.SOIL)
+    public static final Block DIRTMOND_ORE = registerBlock("dirtmond_ore", new Block(AbstractBlock.Settings.create()
             .requiresTool()
             .strength(2f, 5f)
             .sounds(BlockSoundGroup.GRASS)));
 
-    public static final Block DIRTMOND_BLOCK = registerBlock("dirtmond_block", new Block(FabricBlockSettings
-            .of(Material.METAL)
+    public static final Block DIRTMOND_BLOCK = registerBlock("dirtmond_block", new Block(AbstractBlock.Settings.create()
             .requiresTool()
             .strength(4f, 20f)
             .sounds(BlockSoundGroup.METAL)));
