@@ -1,14 +1,13 @@
 package com.dmcpacks.dirtmonds.util;
 
 import com.dmcpacks.dirtmonds.item.ModItems;
+
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.util.Identifier;
-
-import java.util.List;
 
 public class ModLootTableModifiers {
     private static final Identifier VILLAGE_TOOLSMITH_ID = new Identifier("minecraft", "chests/village/village_toolsmith");

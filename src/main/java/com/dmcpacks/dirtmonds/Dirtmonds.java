@@ -17,27 +17,27 @@ import net.minecraft.util.Identifier;
 
 public class Dirtmonds implements ModInitializer {
 
-	public static final String MOD_ID = "dirtmonds";
+    public static final String MOD_ID = "dirtmonds";
 
-	//dirtmond finder
+    //dirtmond finder
 
-	public static final Item DIRTMOND_FINDER = new DirtmondFinder(new FabricItemSettings()
-			.maxCount(1));
+    public static final Item DIRTMOND_FINDER = new DirtmondFinder(new FabricItemSettings()
+            .maxCount(1));
 
-	@Override
-	public void onInitialize() {
-		ModConfigs.registerConfigs();
-		ModItemGroup.registerItemGroup();
-		ModItems.registerModItems();
-		ModBlocks.registerModBlocks();
-		ModLootTableModifiers.modifyLootTables();
-		OreJsonRegistration.registerOreGeneration();
+    @Override
+    public void onInitialize() {
+        ModConfigs.registerConfigs();
+        ModItemGroup.registerItemGroup();
+        ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
+        ModLootTableModifiers.modifyLootTables();
+        OreJsonRegistration.registerOreGeneration();
 
-		if(ModConfigs.dirtmondfinder) {
-			Registry.register(Registries.ITEM, new Identifier("dirtmonds", "dirtmond_finder"), DIRTMOND_FINDER);
-		}
+        if(ModConfigs.dirtmondfinder) {
+            Registry.register(Registries.ITEM, new Identifier("dirtmonds", "dirtmond_finder"), DIRTMOND_FINDER);
+        }
 
 
-		System.out.print("Fully registered " + MOD_ID + "\n");
-	}
+        System.out.print("Fully registered " + MOD_ID + "\n");
+    }
 }

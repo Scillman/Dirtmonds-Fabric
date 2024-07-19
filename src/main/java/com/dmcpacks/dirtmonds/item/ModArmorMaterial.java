@@ -1,22 +1,21 @@
 package com.dmcpacks.dirtmonds.item;
 
+import java.util.EnumMap;
+import java.util.function.Supplier;
+
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Lazy;
 import net.minecraft.util.Util;
-
-import java.util.EnumMap;
-import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
 //    DIRTMOND("dirtmond", 26, new int[]{2, 4, 5, 2}, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1F, 0F, () -> {
 //        return Ingredient.ofItems(ModItems.DIRTMOND);
 //    });
-    DIRTMOND("dirtmond", 26, (EnumMap) Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    DIRTMOND("dirtmond", 26, Util.make(new EnumMap<ArmorItem.Type, Integer>(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 2);
         map.put(ArmorItem.Type.LEGGINGS, 4);
         map.put(ArmorItem.Type.CHESTPLATE, 5);
@@ -27,14 +26,14 @@ public enum ModArmorMaterial implements ArmorMaterial {
 
     private final String name;
     private final int durabilityMultiplier;
-    private final EnumMap protectionAmounts;
+    private final EnumMap<ArmorItem.Type, Integer> protectionAmounts;
     private final int enchantability;
     private final SoundEvent equipSound;
     private final float toughness;
     private final float knockbackResistance;
-    private final Lazy<Ingredient> repairIngredientSupplier;
+    private final Supplier<Ingredient> repairIngredientSupplier;
 
-    private ModArmorMaterial(String name, int durabilityMultiplier, EnumMap protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
+    private ModArmorMaterial(String name, int durabilityMultiplier, EnumMap<ArmorItem.Type, Integer> protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
@@ -42,7 +41,7 @@ public enum ModArmorMaterial implements ArmorMaterial {
         this.equipSound = equipSound;
         this.toughness = toughness;
         this.knockbackResistance = knockbackResistance;
-        this.repairIngredientSupplier = new Lazy(repairIngredientSupplier);
+        this.repairIngredientSupplier = repairIngredientSupplier;
     }
 
 //    public int getDurability(EquipmentSlot slot) {
@@ -52,7 +51,7 @@ public enum ModArmorMaterial implements ArmorMaterial {
 //    public int getProtection(EquipmentSlot slot) {
 //        return this.protectionAmounts[slot.getEntitySlotId()];
 //    }
-    private static final EnumMap BASE_DURABILITY = (EnumMap)Util.make(new EnumMap(ArmorItem.Type.class), (map) -> {
+    private static final EnumMap<ArmorItem.Type, Integer> BASE_DURABILITY = Util.make(new EnumMap<ArmorItem.Type, Integer>(ArmorItem.Type.class), (map) -> {
         map.put(ArmorItem.Type.BOOTS, 11);
         map.put(ArmorItem.Type.LEGGINGS, 13);
         map.put(ArmorItem.Type.CHESTPLATE, 14);
@@ -60,11 +59,11 @@ public enum ModArmorMaterial implements ArmorMaterial {
     });
 
     public int getDurability(ArmorItem.Type type) {
-        return (Integer)BASE_DURABILITY.get(type) * this.durabilityMultiplier;
+        return BASE_DURABILITY.get(type) * this.durabilityMultiplier;
     }
 
     public int getProtection(ArmorItem.Type type) {
-        return (Integer)this.protectionAmounts.get(type);
+        return this.protectionAmounts.get(type);
     }
     public int getEnchantability() {
         return this.enchantability;
@@ -75,7 +74,8 @@ public enum ModArmorMaterial implements ArmorMaterial {
     }
 
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredientSupplier.get();
+        assert(this.repairIngredientSupplier != null);
+        return this.repairIngredientSupplier.get();
     }
 
     public String getName() {

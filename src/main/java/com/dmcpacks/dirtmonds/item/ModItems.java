@@ -1,15 +1,21 @@
 package com.dmcpacks.dirtmonds.item;
 
+import com.dmcpacks.dirtmonds.Dirtmonds;
 import com.dmcpacks.dirtmonds.config.ModConfigs;
-import com.dmcpacks.dirtmonds.item.custom.*;
+import com.dmcpacks.dirtmonds.item.custom.ModArmorItem;
+import com.dmcpacks.dirtmonds.item.custom.ModAxeItem;
+import com.dmcpacks.dirtmonds.item.custom.ModHoeItem;
+import com.dmcpacks.dirtmonds.item.custom.ModPickaxeItem;
+import com.dmcpacks.dirtmonds.item.custom.ModSwordItem;
+
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.*;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ShovelItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import com.dmcpacks.dirtmonds.Dirtmonds;
 
 public class ModItems {
 
